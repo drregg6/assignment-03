@@ -16,10 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="philly-day" translatesAutoresizingMaskIntoConstraints="NO" id="TjQ-Ml-PF8" userLabel="am-background">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="philly-day" translatesAutoresizingMaskIntoConstraints="NO" id="TjQ-Ml-PF8" userLabel="am-background">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="philly-night" translatesAutoresizingMaskIntoConstraints="NO" id="vUA-mq-Hzm" userLabel="pm-background">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="philly-night" translatesAutoresizingMaskIntoConstraints="NO" id="vUA-mq-Hzm" userLabel="pm-background">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
@@ -63,6 +63,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Start Timer / Stop Music">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MjU-u1-RAx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -94,7 +97,10 @@
                     </view>
                     <connections>
                         <outlet property="amBackgroundImage" destination="TjQ-Ml-PF8" id="Dak-F4-HCT"/>
+                        <outlet property="dateLabel" destination="Ryu-4T-AXe" id="LRF-fo-d8u"/>
+                        <outlet property="datePicker" destination="lKb-ft-eMB" id="qle-la-mjg"/>
                         <outlet property="pmBackgroundImage" destination="vUA-mq-Hzm" id="MO8-yL-UmX"/>
+                        <outlet property="timeRemainingLabel" destination="8kS-07-nMT" id="bJY-fz-vpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
