@@ -23,49 +23,73 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mon, 30 Jan 2023 15:57:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryu-4T-AXe">
-                                <rect key="frame" x="91" y="249" width="338" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="1" height="-1"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-ft-eMB">
-                                <rect key="frame" x="-0.13755795980539012" y="454" width="643.93817619786921" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LFP-NS-oxU" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="89" width="393" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, 30 Jan 2023 15:57:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryu-4T-AXe">
+                                        <rect key="frame" x="27.333333333333343" y="0.0" width="338.33333333333326" height="34.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="-1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining: 00:10:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-07-nMT">
+                                        <rect key="frame" x="98.333333333333329" y="42.666666666666657" width="196.66666666666669" height="21.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="-1"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-ft-eMB">
+                                <rect key="frame" x="36.666666666666657" y="351" width="320" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="czQ-AI-npS"/>
+                                </constraints>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKA-ot-BV4">
-                                <rect key="frame" x="93" y="643" width="208" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start Timer / Stop Music">
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Remaining: 00:10:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-07-nMT">
-                                <rect key="frame" x="99" y="727" width="196" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="1" height="-1"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yJk-Yu-hdx" userLabel="BottomView">
+                                <rect key="frame" x="0.0" y="748" width="393" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKA-ot-BV4">
+                                        <rect key="frame" x="92.666666666666671" y="0.0" width="207.66666666666663" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Kcl-Cb-iBI"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start Timer / Stop Music">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yJk-Yu-hdx" secondAttribute="bottom" constant="30" id="1vu-fL-M6F"/>
+                            <constraint firstItem="LFP-NS-oxU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2q8-ds-anU"/>
                             <constraint firstItem="vUA-mq-Hzm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7NN-Ql-tCW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yJk-Yu-hdx" secondAttribute="trailing" id="82A-Nf-4Yv"/>
+                            <constraint firstItem="lKb-ft-eMB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8MH-9o-YYH"/>
                             <constraint firstItem="vUA-mq-Hzm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="ApN-UP-7FA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LFP-NS-oxU" secondAttribute="trailing" id="EEa-73-5kY"/>
                             <constraint firstItem="TjQ-Ml-PF8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Eay-bl-AzQ"/>
                             <constraint firstAttribute="bottom" secondItem="TjQ-Ml-PF8" secondAttribute="bottom" id="G23-5w-tIF"/>
+                            <constraint firstItem="yJk-Yu-hdx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HU9-9r-rTX"/>
+                            <constraint firstItem="lKb-ft-eMB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ImF-hh-0wn"/>
                             <constraint firstItem="vUA-mq-Hzm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mt8-Bv-FCg"/>
                             <constraint firstItem="TjQ-Ml-PF8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NEF-fM-wz6"/>
+                            <constraint firstItem="lKb-ft-eMB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ugq-9k-l10"/>
                             <constraint firstItem="TjQ-Ml-PF8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="WSP-N9-hq4"/>
                             <constraint firstAttribute="bottom" secondItem="vUA-mq-Hzm" secondAttribute="bottom" id="ZSY-wd-rXB"/>
+                            <constraint firstItem="lKb-ft-eMB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cqS-6n-6B0"/>
+                            <constraint firstItem="LFP-NS-oxU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="gMT-uU-Frm"/>
+                            <constraint firstItem="yJk-Yu-hdx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h8x-1D-uwo"/>
+                            <constraint firstItem="yJk-Yu-hdx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wJK-UR-C7b"/>
                         </constraints>
                     </view>
                     <connections>
