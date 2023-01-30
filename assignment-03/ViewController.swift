@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     var timer = Timer()
     var formatter = DateFormatter()
     var date = Date()
-    var hour: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +25,7 @@ class ViewController: UIViewController {
         formatter.dateFormat = "E, d MMM yyyy HH:mm:ss"
         dateLabel.text = formatter.string(from: date)
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
-        amBackgroundImage.isHidden = true
+        setBackground()
     }
 
     @IBAction func buttonPress(_ sender: UIButton) {
@@ -35,14 +34,21 @@ class ViewController: UIViewController {
     }
     
     @objc func tick() {
-        date = Date()
         formatter.dateFormat = "E, d MMM yyyy HH:mm:ss"
         
-        dateLabel.text = formatter.string(from: date)
+        dateLabel.text = formatter.string(from: Date())
+        setBackground()
     }
     
-    func setBackground(_ hour: Int) {
-        
+    func setBackground() {
+        let dateComps = Calendar.current.dateComponents([.hour, .day, .weekday, .month], from: Date())
+        if dateComps.hour! >= 12 {
+            amBackgroundImage.isHidden = true
+            pmBackgroundImage.isHidden = false
+        } else {
+            amBackgroundImage.isHidden = false
+            pmBackgroundImage.isHidden = true
+        }
     }
     
 }
