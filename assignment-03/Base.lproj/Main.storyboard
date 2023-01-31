@@ -101,6 +101,7 @@
                         <outlet property="datePicker" destination="lKb-ft-eMB" id="qle-la-mjg"/>
                         <outlet property="pmBackgroundImage" destination="vUA-mq-Hzm" id="MO8-yL-UmX"/>
                         <outlet property="timeRemainingLabel" destination="8kS-07-nMT" id="bJY-fz-vpf"/>
+                        <outlet property="timerButton" destination="yKA-ot-BV4" id="r9R-bK-MJ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
