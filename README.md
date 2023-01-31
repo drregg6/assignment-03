@@ -6,9 +6,9 @@ TODOs
 -----
 - [x] Label has current time
 - [x] Background changes dependent on AM / PM
-- [ ] User can set a timer
-- [ ] Timer runs on buttonPress
-- [ ] Second label counts down the timer
+- [x] User can set a timer
+- [x] Timer runs on buttonPress
+- [x] Second label counts down the timer
 - [ ] Signal chimes when countdown ends
 - [ ] Button should dynamical change to 'Stop music' when timer ends, then switch back to 'Start timer' once music ends
 
