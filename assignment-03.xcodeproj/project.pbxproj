@@ -13,6 +13,7 @@
 		FD7F5A2729885C64000D82C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7F5A2529885C64000D82C7 /* Main.storyboard */; };
 		FD7F5A2929885C66000D82C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7F5A2829885C66000D82C7 /* Assets.xcassets */; };
 		FD7F5A2C29885C66000D82C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7F5A2A29885C66000D82C7 /* LaunchScreen.storyboard */; };
+		FDD0E015298B1CA000FD067E /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FDD0E014298B1CA000FD067E /* chime.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FD7F5A2829885C66000D82C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD7F5A2B29885C66000D82C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD7F5A2D29885C66000D82C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDD0E014298B1CA000FD067E /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = chime.mp3; path = ../../chime.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				FD7F5A2129885C64000D82C7 /* SceneDelegate.swift */,
 				FD7F5A2329885C64000D82C7 /* ViewController.swift */,
 				FD7F5A2529885C64000D82C7 /* Main.storyboard */,
+				FDD0E014298B1CA000FD067E /* chime.mp3 */,
 				FD7F5A2829885C66000D82C7 /* Assets.xcassets */,
 				FD7F5A2A29885C66000D82C7 /* LaunchScreen.storyboard */,
 				FD7F5A2D29885C66000D82C7 /* Info.plist */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD7F5A2C29885C66000D82C7 /* LaunchScreen.storyboard in Resources */,
+				FDD0E015298B1CA000FD067E /* chime.mp3 in Resources */,
 				FD7F5A2929885C66000D82C7 /* Assets.xcassets in Resources */,
 				FD7F5A2729885C64000D82C7 /* Main.storyboard in Resources */,
 			);
