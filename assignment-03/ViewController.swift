@@ -4,6 +4,10 @@
 //
 //  Created by Dave Regg on 1/30/23.
 //
+// = TODO:
+// -------
+// - Button should stop music on click when music chimes
+// - Maybe stack two buttons and show / hide on button press?
 
 import UIKit
 import AVFoundation
@@ -48,20 +52,28 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPress(_ sender: UIButton) {
         timer.invalidate()
-        timeRemainingLabel.isHidden = false
-        // Convert datePicker.countdownduration into HH:MM:SS
-        // Concat to label2
-        timeRemainingLabel.text = "Time Remaining: " + stringFromTimeInterval(interval: datePicker.countDownDuration)
-        
-        // Create a Timer for the countdown
-        timeLeft = Int(datePicker.countDownDuration)
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startCountdown), userInfo: nil, repeats: true)
-        
-        // Ensure that User cannot interact with Picker after button press
-        datePicker.isUserInteractionEnabled = false
-        
-        timerButton.setTitle("Stop Music", for: .normal)
-        timerButton.isUserInteractionEnabled = false
+        if !isTimerOn {
+            isTimerOn = true
+            timeRemainingLabel.isHidden = false
+            // Convert datePicker.countdownduration into HH:MM:SS
+            // Concat to label2
+            timeRemainingLabel.text = "Time Remaining: " + stringFromTimeInterval(interval: datePicker.countDownDuration)
+            
+            // Create a Timer for the countdown
+            timeLeft = Int(datePicker.countDownDuration)
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startCountdown), userInfo: nil, repeats: true)
+            
+            // Ensure that User cannot interact with Picker after button press
+            datePicker.isUserInteractionEnabled = false
+            
+            timerButton.setTitle("Stop Timer", for: .normal)
+        } else {
+            isTimerOn = false
+            audioPlayer.stop()
+            timeRemainingLabel.isHidden = true
+            datePicker.isUserInteractionEnabled = true
+            timerButton.setTitle("Start Timer", for: .normal)
+        }
     }
     
     @objc func tick() {
@@ -73,12 +85,12 @@ class ViewController: UIViewController {
     
     @objc func startCountdown() {
         if timeLeft! > 0 {
+            timeLeft! -= 1
             timeRemainingLabel.text = "Time Remaining: " + stringFromTimeInterval(timeLeft: timeLeft!)
-            timeLeft! -= 1
         } else if timeLeft! == 0 {
-            timeLeft! -= 1
             // Sound chime
             audioPlayer.play()
+            timerButton.setTitle("Stop Music", for: .normal)
         } else {
             // Invalid timer
             timer.invalidate()
